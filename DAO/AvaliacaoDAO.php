@@ -40,10 +40,6 @@ class AvaliacaoDAO
             ':comentario' => $comentario
         ]);
     }
-    public function buscarPorId($id)
-    {
-        $sql = "SELECT * FROM avaliacoes WHERE id = :id";
-        return $this->factory->banco->executar($sql, [':id' => $id])->fetch(\PDO::FETCH_ASSOC);
-    }
+
 
 }
